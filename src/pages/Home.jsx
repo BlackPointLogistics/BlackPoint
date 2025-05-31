@@ -10,9 +10,8 @@ const Home = () => (
         Elite Star Citizen Organization — Join us to conquer the stars!
       </p>
       <img
-        src="https://static.invenglobal.com/upload/image/2020/11/25/i1606290080312517.jpeg"
-        alt="Star Citizen Fleet"
-        style={{ maxWidth: '90%', borderRadius: '15px' }}
+        src="https://robertsspaceindustries.com/media/ship/Anvil-Hawk/Anvil-Hawk_1920x1080_2.jpg"
+        alt="Anvil Hawk Star Citizen"
       />
       <br />
       <a href="https://discord.com/invite/TBD" target="_blank" rel="noopener noreferrer">

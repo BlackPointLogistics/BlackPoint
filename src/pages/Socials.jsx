@@ -4,11 +4,12 @@ import NavBar from '../components/NavBar';
 const Socials = () => (
   <>
     <NavBar />
-    <main style={{ padding: '2rem' }}>
+    <main>
       <h2>Socials</h2>
       <ul>
-        <li><a href="https://discord.com/invite/TBD" style={{ color: 'white' }}>Discord</a></li>
-        <li><a href="https://twitter.com" style={{ color: 'white' }}>Twitter</a></li>
+        <li><a href="https://twitter.com/BlackPointDir" target="_blank" rel="noopener noreferrer">Twitter</a></li>
+        <li><a href="https://discord.com/invite/TBD" target="_blank" rel="noopener noreferrer">Discord</a></li>
+        <li><a href="https://www.twitch.tv/BlackPointDirective" target="_blank" rel="noopener noreferrer">Twitch</a></li>
       </ul>
     </main>
   </>

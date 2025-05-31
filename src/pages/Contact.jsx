@@ -4,11 +4,13 @@ import NavBar from '../components/NavBar';
 const Contact = () => (
   <>
     <NavBar />
-    <main style={{ padding: '2rem' }}>
+    <main>
       <h2>Contact Us</h2>
-      <p>Email us at: contact@blackpointdirective.com</p>
+      <p>Email: contact@blackpointdirective.org</p>
+      <p>Phone: +1 (555) 123-4567</p>
     </main>
   </>
 );
 
 export default Contact;
+

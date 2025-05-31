@@ -1,11 +1,12 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 const NavBar = () => (
-  <nav style={{ display: 'flex', gap: '1rem', padding: '1rem', backgroundColor: '#111' }}>
-    <a href="/" style={{ color: 'white' }}>Home</a>
-    <a href="/why" style={{ color: 'white' }}>Why Us</a>
-    <a href="/contact" style={{ color: 'white' }}>Contact</a>
-    <a href="/socials" style={{ color: 'white' }}>Socials</a>
+  <nav>
+    <NavLink to="/" end>Home</NavLink>
+    <NavLink to="/why">Why Us</NavLink>
+    <NavLink to="/contact">Contact Us</NavLink>
+    <NavLink to="/socials">Socials</NavLink>
   </nav>
 );
 
