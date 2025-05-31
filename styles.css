@@ -1,0 +1,129 @@
+/* styles.css */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #0a0a0a;
+  color: #00ffff;
+  text-align: center;
+}
+
+nav {
+  background-color: #003344;
+  padding: 15px 0;
+  margin-bottom: 30px;
+}
+
+nav a {
+  color: #00ffff;
+  margin: 0 20px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #66ffff;
+}
+
+h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+
+button {
+  background-color: #00ffff;
+  border: none;
+  color: #000;
+  padding: 12px 30px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 7px;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #66ffff;
+}
+
+footer {
+  margin-top: 40px;
+  font-size: 14px;
+  color: #004455;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 800px;
+  margin: 0 auto 40px;
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 15px #00ffff88;
+}
+
+/* Slides */
+.mySlides {
+  display: none;
+  width: 100%;
+}
+
+.mySlides img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+/* Caption text */
+.caption {
+  color: #00ffff;
+  font-size: 1.2em;
+  padding: 10px 0;
+  background: #001122cc;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -20px;
+  padding: 16px;
+  color: #00ffff;
+  font-weight: bold;
+  font-size: 22px;
+  border-radius: 0 8px 8px 0;
+  user-select: none;
+  background-color: #001122aa;
+  transition: background-color 0.3s ease;
+}
+
+.next {
+  right: 0;
+  border-radius: 8px 0 0 8px;
+}
+
+.prev:hover, .next:hover {
+  background-color: #004466cc;
+}
+
+/* Responsive */
+@media screen and (max-width: 600px) {
+  nav a {
+    font-size: 14px;
+    margin: 0 10px;
+  }
+  h1 {
+    font-size: 2em;
+  }
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+}
