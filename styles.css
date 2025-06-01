@@ -28,29 +28,14 @@ nav a:hover {
 .hero {
   position: relative;
   height: 50vh;
-  overflow: hidden;
+  background-image: url('https://starcitizen.tools/images/thumb/4/4e/Hammerhead_Front.jpg/1920px-Hammerhead_Front.jpg');
+  background-size: cover;
+  background-position: center;
   display: flex;
   justify-content: center;
   align-items: center;
   color: #00ffff;
   text-align: center;
-}
-
-.video-background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
-  z-index: 0;
-}
-
-.video-background iframe {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  pointer-events: none;
 }
 
 .overlay {
