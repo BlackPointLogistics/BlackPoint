@@ -27,14 +27,13 @@ nav a:hover {
 /* Hero section */
 .hero {
   position: relative;
-  height: 50vh;
-  background-image: url('https://starcitizen.tools/images/thumb/4/4e/Hammerhead_Front.jpg/1920px-Hammerhead_Front.jpg');
+  height: 60vh;
+  background-image: url('https://media.robertsspaceindustries.com/xngaw8s5l5ims/source.jpg');
   background-size: cover;
   background-position: center;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #00ffff;
   text-align: center;
 }
 
@@ -48,6 +47,7 @@ nav a:hover {
 .content {
   position: relative;
   z-index: 2;
+  color: #00ffff;
   padding: 1rem;
   max-width: 800px;
 }
@@ -77,36 +77,33 @@ button:hover {
   background-color: #00cccc;
 }
 
-/* Starfield section */
-.starfield {
+/* Galaxy section */
+.galaxy {
   min-height: 50vh;
-  background: radial-gradient(ellipse at center, #001022 0%, #00030a 70%, #000000 100%);
-  position: relative;
-  overflow: hidden;
+  background-image: url('https://cdn.pixabay.com/photo/2011/12/14/12/11/stars-11099_1280.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
 }
 
-.stars {
-  width: 2px;
-  height: 2px;
-  background: white;
-  box-shadow:
-    20px 30px white,
-    50px 80px white,
-    100px 150px white,
-    150px 200px white,
-    200px 120px white,
-    250px 60px white,
-    300px 90px white,
-    350px 180px white,
-    400px 40px white,
-    450px 170px white;
-  position: absolute;
-  top: 0;
-  left: 0;
-  animation: twinkle 5s infinite alternate;
+.galaxy-content {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 700px;
 }
 
-@keyframes twinkle {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.3; }
+.galaxy h2 {
+  color: #00ffff;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.galaxy p {
+  color: #ffffff;
+  font-size: 1.1rem;
 }
