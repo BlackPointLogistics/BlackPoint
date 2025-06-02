@@ -8,6 +8,7 @@
 </head>
 <body>
 
+  <!-- NAVIGATION BAR -->
   <nav>
     <a href="index.html">Home</a>
     <a href="why.html">Why Us</a>
@@ -15,21 +16,90 @@
     <a href="socials.html">Socials</a>
   </nav>
 
+  <!-- HERO / SLIDESHOW SECTION -->
   <section class="hero">
-    <div class="overlay"></div>
-    <div class="content">
+    <div class="slideshow-container">
+      <div class="slide">
+        <img src="images/slide1.png" alt="Star Citizen Slide 1" />
+      </div>
+      <div class="slide">
+        <img src="images/slide2.png" alt="Star Citizen Slide 2" />
+      </div>
+      <div class="slide">
+        <img src="images/slide3.png" alt="Star Citizen Slide 3" />
+      </div>
+      <!-- Next/Prev arrows -->
+      <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+      <a class="next" onclick="changeSlide(1)">&#10095;</a>
+    </div>
+
+    <!-- OVERLAY TEXT ON HERO -->
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
       <h1>BlackPointDirective</h1>
       <p>Join our elite Star Citizen organization specializing in Logistics, Security, and Intelligence. Together we dominate the stars!</p>
       <button onclick="window.location.href='https://discord.com/invite/TBD'">Join Us</button>
     </div>
   </section>
 
+  <!-- GALAXY-STYLE SECTION BELOW HERO -->
   <section class="galaxy">
     <div class="galaxy-content">
       <h2>Explore the Stars</h2>
       <p>From tactical operations to industrial might, BlackPointDirective leads the frontier in the 'verse.</p>
     </div>
   </section>
+
+  <!-- AUTHORIZED ACCESS SECTION -->
+  <section class="auth-section">
+    <h2>Authorized Personnel Only</h2>
+    <p>Enter access code to view internal information:</p>
+    <input
+      type="password"
+      id="accessCode"
+      placeholder="Enter code here"
+      autocomplete="off"
+    />
+    <button id="unlockBtn">Enter</button>
+  </section>
+
+  <script>
+    // ===== SLIDESHOW LOGIC =====
+    let slideIndex = 0;
+    const slides = document.getElementsByClassName("slide");
+    const totalSlides = slides.length;
+
+    function showSlide(n) {
+      for (let i = 0; i < totalSlides; i++) {
+        slides[i].style.display = "none";
+      }
+      slides[n].style.display = "block";
+    }
+
+    function changeSlide(direction) {
+      slideIndex = (slideIndex + direction + totalSlides) % totalSlides;
+      showSlide(slideIndex);
+    }
+
+    function autoSlide() {
+      slideIndex = (slideIndex + 1) % totalSlides;
+      showSlide(slideIndex);
+    }
+
+    // Initialize slideshow
+    showSlide(slideIndex);
+    setInterval(autoSlide, 5000); // Change image every 5 seconds
+
+    // ===== AUTHENTICATION LOGIC =====
+    document.getElementById("unlockBtn").addEventListener("click", () => {
+      const code = document.getElementById("accessCode").value.trim();
+      if (code === "BlackPointA258") {
+        window.location.href = "internal.html";
+      } else {
+        alert("Incorrect code. Please try again.");
+      }
+    });
+  </script>
 
 </body>
 </html>

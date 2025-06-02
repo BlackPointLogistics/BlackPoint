@@ -1,85 +1,138 @@
-/* Reset/default styles */
-body, html {
+/* Global Reset */
+* {
   margin: 0;
   padding: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: black;
-  color: white;
+  box-sizing: border-box;
 }
 
+body, html {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #000;
+  color: #fff;
+  min-height: 100vh;
+}
+
+/* NAV BAR */
 nav {
   background-color: #0d0d0d;
   padding: 1rem;
   text-align: center;
 }
-
 nav a {
   color: #00ffff;
   text-decoration: none;
   margin: 0 1rem;
   font-weight: bold;
+  font-size: 1rem;
+  transition: color 0.2s ease;
 }
-
 nav a:hover {
   color: #ffffff;
 }
 
-/* Hero section */
+/* HERO / SLIDESHOW */
 .hero {
   position: relative;
   height: 60vh;
-  background-image: url('https://media.robertsspaceindustries.com/xngaw8s5l5ims/source.jpg');
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  overflow: hidden;
 }
 
-.overlay {
+/* Slideshow Container */
+.slideshow-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+/* Each Slide */
+.slide {
+  display: none;
+  width: 100%;
+  height: 100%;
+}
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Next & Prev Arrows */
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: #00ffff;
+  font-weight: bold;
+  font-size: 24px;
+  cursor: pointer;
+  user-select: none;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 3px;
+  transition: background-color 0.2s ease;
+  z-index: 2;
+}
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.prev {
+  left: 10px;
+}
+.next {
+  right: 10px;
+}
+
+/* Hero overlay (dark layer for text readability) */
+.hero-overlay {
   position: absolute;
   inset: 0;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 1;
 }
 
-.content {
+/* Hero content */
+.hero-content {
   position: relative;
   z-index: 2;
-  color: #00ffff;
-  padding: 1rem;
-  max-width: 800px;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  padding: 0 1rem;
 }
-
-.hero h1 {
+.hero-content h1 {
   font-size: 3rem;
+  color: #00ffff;
   margin-bottom: 0.5rem;
 }
-
-.hero p {
+.hero-content p {
   font-size: 1.2rem;
   line-height: 1.5;
+  max-width: 800px;
+  margin: 0 auto 1rem;
 }
-
-button {
+.hero-content button {
   padding: 0.75rem 1.5rem;
   font-size: 1rem;
   background-color: #00ffff;
   border: none;
   border-radius: 5px;
-  color: black;
+  color: #000;
   cursor: pointer;
-  margin-top: 1rem;
+  transition: background-color 0.2s ease;
 }
-
-button:hover {
+.hero-content button:hover {
   background-color: #00cccc;
 }
 
-/* Galaxy section */
+/* GALAXY SECTION BELOW HERO */
 .galaxy {
-  min-height: 50vh;
+  min-height: 40vh;
   background-image: url('https://mmos.com/wp-content/uploads/2024/03/star-citizen-space-station.jpg');
   background-size: cover;
   background-position: center;
@@ -89,21 +142,79 @@ button:hover {
   text-align: center;
   padding: 2rem;
 }
-
 .galaxy-content {
   background-color: rgba(0, 0, 0, 0.6);
   padding: 2rem;
   border-radius: 10px;
   max-width: 700px;
 }
-
-.galaxy h2 {
+.galaxy-content h2 {
   color: #00ffff;
   font-size: 2rem;
   margin-bottom: 1rem;
 }
-
-.galaxy p {
+.galaxy-content p {
   color: #ffffff;
   font-size: 1.1rem;
+}
+
+/* AUTHORIZED ACCESS SECTION */
+.auth-section {
+  padding: 2rem 1rem;
+  background-color: #0a0a0a;
+  text-align: center;
+}
+.auth-section h2 {
+  color: #00ffff;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.auth-section p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+.auth-section input {
+  width: 250px;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 2px solid #00ffff;
+  border-radius: 4px;
+  background-color: #1a1a1a;
+  color: #fff;
+  margin-right: 0.5rem;
+}
+.auth-section input::placeholder {
+  color: #999;
+}
+.auth-section button {
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  background-color: #00ffff;
+  border: none;
+  border-radius: 4px;
+  color: #000;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+.auth-section button:hover {
+  background-color: #00cccc;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+  .hero-content p {
+    font-size: 1rem;
+  }
+  .galaxy-content h2 {
+    font-size: 1.7rem;
+  }
+  .galaxy-content p {
+    font-size: 1rem;
+  }
+  .auth-section input {
+    width: 200px;
+  }
 }
