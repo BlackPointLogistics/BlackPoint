@@ -33,12 +33,12 @@ nav a:hover {
 /* HERO / SLIDESHOW */
 .hero {
   position: relative;
-  height: 60vh;
+  height: 60vh; /* Adjust height as needed */
   overflow: hidden;
 }
 
-/* Slideshow Container */
-.slideshow-container {
+/* Slide container: holds all slides */
+.slide-container {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -46,9 +46,10 @@ nav a:hover {
   left: 0;
 }
 
-/* Each Slide */
+/* Each slide */
 .slide {
   display: none;
+  position: absolute;
   width: 100%;
   height: 100%;
 }
@@ -58,33 +59,9 @@ nav a:hover {
   object-fit: cover;
 }
 
-/* Next & Prev Arrows */
-.prev,
-.next {
-  position: absolute;
-  top: 50%;
-  width: auto;
-  padding: 16px;
-  margin-top: -22px;
-  color: #00ffff;
-  font-weight: bold;
-  font-size: 24px;
-  cursor: pointer;
-  user-select: none;
-  background-color: rgba(0, 0, 0, 0.4);
-  border-radius: 3px;
-  transition: background-color 0.2s ease;
-  z-index: 2;
-}
-.prev:hover,
-.next:hover {
-  background-color: rgba(0, 0, 0, 0.7);
-}
-.prev {
-  left: 10px;
-}
-.next {
-  right: 10px;
+/* Show first slide by default */
+.slide:first-child {
+  display: block;
 }
 
 /* Hero overlay (dark layer for text readability) */

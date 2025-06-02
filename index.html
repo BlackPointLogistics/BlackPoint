@@ -18,19 +18,16 @@
 
   <!-- HERO / SLIDESHOW SECTION -->
   <section class="hero">
-    <div class="slideshow-container">
+    <div class="slide-container">
       <div class="slide">
-        <img src="images/slide1.png" alt="Star Citizen Slide 1" />
+        <img src="images/slide1.png" alt="Slide 1" />
       </div>
       <div class="slide">
-        <img src="images/slide2.png" alt="Star Citizen Slide 2" />
+        <img src="images/slide2.png" alt="Slide 2" />
       </div>
       <div class="slide">
-        <img src="images/slide3.png" alt="Star Citizen Slide 3" />
+        <img src="images/slide3.png" alt="Slide 3" />
       </div>
-      <!-- Next/Prev arrows -->
-      <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
-      <a class="next" onclick="changeSlide(1)">&#10095;</a>
     </div>
 
     <!-- OVERLAY TEXT ON HERO -->
@@ -76,19 +73,14 @@
       slides[n].style.display = "block";
     }
 
-    function changeSlide(direction) {
-      slideIndex = (slideIndex + direction + totalSlides) % totalSlides;
-      showSlide(slideIndex);
-    }
-
-    function autoSlide() {
+    function nextSlide() {
       slideIndex = (slideIndex + 1) % totalSlides;
       showSlide(slideIndex);
     }
 
     // Initialize slideshow
     showSlide(slideIndex);
-    setInterval(autoSlide, 5000); // Change image every 5 seconds
+    setInterval(nextSlide, 5000); // Change image every 5 seconds
 
     // ===== AUTHENTICATION LOGIC =====
     document.getElementById("unlockBtn").addEventListener("click", () => {
